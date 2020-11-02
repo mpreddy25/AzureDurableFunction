@@ -1,0 +1,20 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingExcludedTypes": "Request",
+      "samplingSettings": {
+        "isEnabled": true
+      }
+    }
+  },
+  "extensions": {
+    "durableTask": {
+      "hubName": "%MyTaskHub%",
+      "maxConcurrentActivityFunctions": 3,
+      "storageProvider": {
+        "partitionCount": 3
+      }
+    }
+  }
+}
